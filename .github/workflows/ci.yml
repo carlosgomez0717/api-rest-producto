@@ -58,7 +58,7 @@ jobs:
 
       # 5. Ejecutar pruebas automáticas y generar reporte de cobertura
       - name: Ejecutar pruebas y cobertura
-        run: npx jest --detectOpenHandles --forceExit --coverage
+        run: npm test
 
       # 6. Subir reporte de calidad / cobertura como artefacto en GitHub
       - name: Subir reporte de cobertura
