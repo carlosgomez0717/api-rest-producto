@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../src/app.js';
+import app from '../app.js';
 
 describe('GET /', () => {
   it('debería responder con el mensaje de bienvenida de la API', async () => {
