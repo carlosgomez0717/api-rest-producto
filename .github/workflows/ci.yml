@@ -53,6 +53,12 @@ jobs:
 
       - name: Ejecutar pruebas y cobertura
         run: npm test
+      # NUEVO: Paso de análisis de código con SonarQube
+      - name: Analizar código con SonarQube
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Subir reporte de cobertura
         uses: actions/upload-artifact@v4
